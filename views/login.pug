@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Login
+  form.my-3(method='POST', action='/users/login')
+    #form-group.mb-3
+      label.mb-2 Username :
+      input.form-control(name='username' , type='text')
+    #form-group.mb-3
+      label.mb-2 Password :
+      input.form-control(name='password' , type='password')
+    input.btn.btn-primary(type='submit',value='Submit')
+  

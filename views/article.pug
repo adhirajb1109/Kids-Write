@@ -1,0 +1,28 @@
+extends layout
+block content
+  h1.mb-3= article.title
+  h5.mb-4 Written By #{author}
+  .card
+    .card-body
+      h5.card-text= article.content
+  if user
+    if user.id === article.author
+      a.btn.btn-info.mt-3(href="/articles/edit/" + article._id) Edit Article
+      a.btn.btn-danger.mt-3.mx-3.delete-article(href="#" , data-id=article._id) Delete
+  script.
+    $(document).ready(function () {
+      $(".delete-article").on("click", function (e) {
+      $target = $(e.target);
+      const id = $target.attr("data-id");
+      $.ajax({
+        type:"DELETE",
+        url: "/articles/" + id,
+        success : function (response) {
+          window.location.href = "/"
+        },
+        error : function (error) {
+          console.log(error);
+        }
+      })
+    });
+    });

@@ -1,0 +1,35 @@
+{
+  "name": "kids-write",
+  "version": "1.0.0",
+  "description": "Kids Write is a blogging platform for kids , where kids can express themselves and share their knowledge and thoughts with the world .",
+  "main": "app.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "Pug",
+    "MongoDB",
+    "Mongoose",
+    "JQuery",
+    "Ajax",
+    "Bootstrap"
+  ],
+  "author": "Adhiraj Bhatia",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.11.1",
+    "mongoose": "^5.12.10",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.2"
+  }
+}
