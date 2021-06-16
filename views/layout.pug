@@ -22,19 +22,22 @@ html(lang="en")
                 a.nav-link.active(href='/articles/add') Add Article
           ul.nav.navbar-nav.navbar-right
             if user
-              li 
-                a.nav-link.active(href="/users/logout") Logout
+              li.nav-item.dropdown
+                a#navbarDropdown.nav-link.dropdown-toggle.mx-1(href='/' role='button' data-bs-toggle='dropdown' aria-expanded='false') #{user.name}
+                ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                  li
+                  a.dropdown-item(href='/users/logout') Logout
             else
               li
                 a.nav-link.active(href='/users/register') Register
               li
-                a.nav-link.active(href='/users/Login') Login
+                a.nav-link.active(href='/users/login') Login
     .container.my-4
       != messages('message', locals)
       if errors
         each error, i in errors
           div(class="alert alert-danger") #{error.msg}
       block content
-    
 
-        
+
+

@@ -9,9 +9,8 @@ const { check, validationResult } = require("express-validator/check");
 const { matchedData, sanitize } = require("express-validator/filter");
 const config = require("./config/database");
 const port = process.env.PORT || 8080;
-mongoose.connect(
-  config.database,
-  { useNewUrlParser: true });
+const User = require("./models/article");
+mongoose.connect(config.database, { useNewUrlParser: true });
 let db = mongoose.connection;
 db.once("open", () => {
   console.log("Connected To Database !");
@@ -50,7 +49,10 @@ app.get("/", (req, res) => {
     if (err) {
       console.error(err);
     } else {
-      res.render("index", { title: "Articles", articles: articles });
+      res.render("index", {
+        articles: articles,
+        title: "Feed",
+      });
     }
   });
 });
