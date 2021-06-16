@@ -4,10 +4,7 @@ block content
   h1 #{title}
   ul.list-group.my-4
     each article, i in articles
-      .card(style='width: 20rem;')
-        .card-body
-          h5.card-title #{article.title}
-          p.card-text.d-inline #{article.content.substring(0, 60)}
-          a.d-inline.mx-1.text-decoration-none(href="/articles/"+ article._id) Read More
+      li.list-group-item
+        a.text-dark.text-decoration-none(href="/articles/"+article._id)= article.title
 
 

@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 body {
-  font-family: "Comfortaa";
-  font-weight: bold !important;
+  font-family: "Quicksand";
+  font-weight: bolder !important;
 }
 .alert-error {
   color: #a94442;
@@ -20,4 +20,10 @@ body {
 .none {
   display: none !important;
 }
-
+.form-control {
+  display: inline !important;
+  width: 90% !important;
+}
+.logout {
+  height: 20px;
+}

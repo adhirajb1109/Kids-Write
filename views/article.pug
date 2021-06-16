@@ -7,8 +7,10 @@ block content
       h5.card-text.lh-lg= article.content
   if user
     if user.id === article.author
-      a.btn.btn-info.mt-3(href="/articles/edit/" + article._id) Edit Article
-      a.btn.btn-danger.mt-3.mx-3.delete-article(href="#" , data-id=article._id) Delete
+      a.btn.btn-dark.mt-3(href="/articles/edit/" + article._id) Edit
+        i.far.fa-edit.mx-2
+      a.btn.btn-dark.mt-3.mx-3.delete-article(href="#" , data-id=article._id) Delete
+        i.far.fa-trash-alt.mx-2
   script.
     $(document).ready(function () {
       $(".delete-article").on("click", function (e) {

@@ -4,9 +4,7 @@ block content
   h1 #{title}
   form.my-3(method='POST', action='/articles/add')
     #form-group.mb3
-      label.mb-2 Title:
-      input.form-control.mb-3(name='title', type='text')
+      input.form-control.mb-3(name='title', type='text' , placeholder="Enter Title :")
     #form-group.mb-3
-      label.mb-2 Content:
-      textarea.form-control(name='content' , rows="5")
-    input.btn.btn-primary(type='submit',value='Submit')
+      textarea.form-control(name='content' , rows="5" , placeholder="Enter Content : ")
+    input.btn.btn-dark(type='submit',value='Submit')

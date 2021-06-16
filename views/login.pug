@@ -1,13 +1,12 @@
 extends layout
 
 block content
-  h1 Login
+  h1 Login To Kids Write
   form.my-3(method='POST', action='/users/login')
     #form-group.mb-3
-      label.mb-2 Username :
-      img.mx-2.mb-2(src='https://static.thenounproject.com/png/1081856-200.png' alt='name' style='height:30px')
-      input.form-control(name='username' , type='text')
+      i.far.fa-user.mx-2
+      input.form-control(name='username' , type='text' , placeholder="Username :")
     #form-group.mb-3
-      label.mb-2 Password 🔑 :
-      input.form-control(name='password' , type='password')
-    input.btn.btn-primary(type='submit',value='Submit')
+      i.fas.fa-lock.mx-2
+      input.form-control(name='password' , type='password' , placeholder="Password :")
+    input.btn.btn-dark(type='submit',value='Submit')

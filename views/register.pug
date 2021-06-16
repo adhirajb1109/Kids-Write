@@ -1,23 +1,21 @@
 extends layout
 
 block content
-  h1 Register
+  h1 Create Your Kids Write Account
   form.my-3(method='POST', action='/users/register')
     #form-group.mb3
-      label.mb-2 Name :
-      img.mx-2.mb-2(src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/emojidex/112/bust-in-silhouette_1f464.png' alt='name' style='height:20px')
-      input.form-control.mb-3(name='name', type='text')
+      i.far.fa-user.mx-2
+      input.form-control.mb-3(name='name', type='text' , placeholder="Name :")
     #form-group.mb-3
-      label.mb-2 Email 📧 :
-      input.form-control(name='email' type='email')
+      i.far.fa-envelope.mx-2
+      input.form-control(name='email' type='email' , placeholder="Email : ")
     #form-group.mb-3
-      label.mb-2 Username :
-      img.mx-2.mb-2(src='https://static.thenounproject.com/png/1081856-200.png' alt='name' style='height:30px')
-      input.form-control(name='username' , type='text')
+      i.far.fa-user.mx-2
+      input.form-control(name='username' , type='text' , placeholder="Username :")
     #form-group.mb-3
-      label.mb-2 Password 🔑 :
-      input.form-control(name='password' , type='password')
+      i.fas.fa-lock.mx-2
+      input.form-control(name='password' , type='password' , placeholder="Password :")
     #form-group.mb-3
-      label.mb-2 Confirm Password ✔️ :
-      input.form-control(name='password2' , type='password')
-    input.btn.btn-primary(type='submit',value='Submit')
+      i.fas.fa-lock.mx-2
+      input.form-control(name='password2' , type='password' , placeholder="Confirm Password :")
+    input.btn.btn-dark(type='submit',value='Submit')

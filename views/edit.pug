@@ -5,11 +5,14 @@ block content
   form(method='POST', action='/articles/edit/' + article._id)
     #form-group.mb-3
       label.mb-2 Title:
+      br
       input.form-control(name='title', type='text' , value=article.title)
     #form-group.mb-3.none
       label.mb-2 Author :
+      br
       input.form-control(name='author' type='text' , value=article.author)
     #form-group.mb-3
       label.mb-2 Content:
+      br
       textarea.form-control(name='content' type='text')=article.content
-    input.btn.btn-primary(type='submit',value='Submit')
+    input.btn.btn-dark(type='submit',value='Submit')
