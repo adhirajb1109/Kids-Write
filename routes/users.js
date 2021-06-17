@@ -5,6 +5,7 @@ const { matchedData, sanitize } = require("express-validator/filter");
 let bcrypt = require("bcryptjs");
 let User = require("../models/user");
 const passport = require("passport");
+const { db } = require("../models/user");
 router.get("/register", (req, res) => {
   res.render("register");
 });
@@ -67,7 +68,7 @@ router.post(
 router.get("/login", (req, res) => {
   res.render("login");
 });
-router.post("/login", (req, res , next) => {
+router.post("/login", (req, res, next) => {
   passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "/users/login",
@@ -76,7 +77,7 @@ router.post("/login", (req, res , next) => {
 });
 router.get("/logout", (req, res) => {
   req.logout();
-  req.flash('success', "You are Logged Out Successfully !");
-  res.redirect('/users/login');
-})
+  req.flash("success", "You are Logged Out Successfully !");
+  res.redirect("/users/login");
+});
 module.exports = router;
