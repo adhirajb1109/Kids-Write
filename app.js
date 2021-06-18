@@ -45,11 +45,14 @@ app.get("*", (req, res, next) => {
   next();
 });
 app.get("/", (req, res) => {
+  res.render("home");
+});
+app.get("/feed", (req, res) => {
   Article.find({}, (err, articles) => {
     if (err) {
       console.error(err);
     } else {
-      res.render("index", {
+      res.render("feed", {
         articles: articles,
         title: "Feed",
       });
