@@ -27,6 +27,8 @@ body {
 .logout {
   height: 20px;
 }
-.border {
-  border: 2px solid !important;
+@media (max-width: 1080px) {
+  .decor {
+    display: none !important;
+  }
 }
