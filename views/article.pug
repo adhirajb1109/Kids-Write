@@ -4,7 +4,7 @@ block content
   h5.my-4.fw-bold Written By #{author}
   .card
     .card-body
-      h5.card-text.lh-lg= article.content
+      h5.card-text.lh-lg !{article.content}
   if user
     if user.id === article.author
       a.btn.btn-dark.mt-3(href="/articles/edit/" + article._id) Edit

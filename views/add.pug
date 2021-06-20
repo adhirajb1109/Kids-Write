@@ -3,9 +3,10 @@ extends layout
 block content
   h1 #{title}
   form.my-3(method='POST', action='/articles/add')
-    #form-group.mb3
-      input.form-control.mb-3(name='title', type='text' , placeholder="Enter Title :")
+    #form-group
+      input.form-control(name='title', type='text' , placeholder="Enter Title :")
     #form-group.mb-3
-      textarea.form-control(name='content' , rows="5" , id="editor" , placeholder="Enter Content : ")
+      textarea.form-control(name='content' , id="editor")
     input.btn.btn-dark(type='submit',value='Submit')
- 
+  script.
+    CKEDITOR.replace('editor')
