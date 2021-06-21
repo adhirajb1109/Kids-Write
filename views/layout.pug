@@ -3,7 +3,6 @@ html(lang="en")
   head
     title Kids Write
     meta(name='title' content='Kids Write')
-    meta(name='theme-color' content='#000000')
     meta(name='description' content='Kids Write is a blogging platform for kids , where kids can express themselves and share their knowledge and thoughts with the world . ')
     link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css')
     link(rel='stylesheet' href='/css/style.css')
@@ -27,11 +26,11 @@ html(lang="en")
               a.nav-link.active(aria-current='page' href='/') Home
             li.nav-item
               a.nav-link.active(aria-current='page' href='/feed') Feed
-            li.nav-item
-              a.nav-link.active(aria-current='page' href='https://contact-adhiraj.herokuapp.com') Contact Developer
             if user
               li.nav-item
                 a.nav-link.active(href='/articles/add') Add Article
+              li.nav-item
+                a.nav-link.active(aria-current='page' href='https://contact-adhiraj.herokuapp.com') Contact Developer
           ul.nav.navbar-nav.navbar-right
             if user
               li.nav-item.dropdown.me-3

@@ -4,11 +4,14 @@ block content
   h1 #{title}
   form.my-3(method='POST', action='/articles/add')
     #form-group.mb-3
-      input.form-control(name='title', type='text' , placeholder="Enter Title :")
+      label.mb-2 Enter Title :
+      br
+      input.form-control(name='title', type='text')
     #form-group.none
       input.form-control(name='author', type='text' , placeholder="Enter Author :")
     #form-group.mb-3
-      textarea.form-control(name='content' , id="editor")
+      label.mb-2 Enter Content :
+      textarea(name='content' , id="editor")
     input.btn.btn-dark(type='submit',value='Submit')
   script.
     CKEDITOR.replace('editor')

@@ -12,7 +12,7 @@ block content
       input.form-control(name='author', type='text', value=article.author)
     #form-group.mb-3
       label.mb-2 Content:
-      textarea.form-control(name='content' type='text' , id="editor") !{article.content}
+      textarea(name='content' type='text' , id="editor") !{article.content}
     input.btn.btn-dark(type='submit',value='Submit')
     script.
       CKEDITOR.replace('editor')
