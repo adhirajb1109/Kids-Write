@@ -27,11 +27,9 @@ body {
 .logout {
   height: 20px;
 }
-@media (max-width: 1080px) {
-  .decor {
-    display: none !important;
-  }
-}
 #editor {
   width: "90%";
+}
+.mail {
+  color : #055160 !important;
 }

@@ -18,7 +18,7 @@ router.get("/edit/:id", ensureAuthenticated, (req, res) => {
   Article.findById(req.params.id, (err, article) => {
     if (article.author === req.user._id) {
       req.flash("danger", "Unauthorized");
-      res.redirect("/feed");
+      res.redirect("/");
     }
     res.render("edit", { article: article, title: "Edit Article" });
   });
@@ -53,7 +53,7 @@ router.post(
           console.error(err);
         } else {
           req.flash("success", "Article Added Successfully !");
-          res.redirect("/feed");
+          res.redirect("/");
         }
       });
     }
@@ -70,7 +70,7 @@ router.post("/edit/:id", (req, res) => {
       console.error(err);
     } else {
       req.flash("success", "Article Updated Successfully !");
-      res.redirect("/feed");
+      res.redirect("/");
     }
   });
 });
@@ -78,12 +78,12 @@ router.delete("/:id", (req, res) => {
   let query = { _id: req.params.id };
   if (!req.user._id) {
     req.flash("danger", "Unauthorized");
-    res.redirect("/feed");
+    res.redirect("/");
   }
   Article.findById(req.params.id, (err, article) => {
     if (article.author === req.user._id) {
       req.flash("danger", "Unauthorized");
-      res.redirect("/feed");
+      res.redirect("/");
     } else {
       Article.deleteOne(query, (err) => {
         if (err) {
