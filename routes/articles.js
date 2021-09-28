@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator/check");
-const { matchedData, sanitize } = require("express-validator/filter");
 let Article = require("../models/article");
 let User = require("../models/user");
 router.get("/add", ensureAuthenticated, (req, res) => {
